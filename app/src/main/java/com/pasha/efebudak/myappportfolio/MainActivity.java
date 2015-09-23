@@ -6,45 +6,36 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button buttonPopularMoviesFirstPart;
-    private Button buttonPopularMoviesSecondPart;
-    private Button buttonSuperDuo;
-    private Button buttonBuildItBigger;
-    private Button buttonMakeYourAppMaterial;
-    private Button buttonGoUbiquitous;
-    private Button buttonCapstoneDesign;
-    private Button buttonCapstoneBuild;
+    @Bind(R.id.main_button_popular_movies_first_part)
+    Button buttonPopularMoviesFirstPart;
+    @Bind(R.id.main_button_popular_movies_second_part)
+    Button buttonPopularMoviesSecondPart;
+    @Bind(R.id.main_button_super_duo)
+    Button buttonSuperDuo;
+    @Bind(R.id.main_button_build_it_bigger)
+    Button buttonBuildItBigger;
+    @Bind(R.id.main_button_make_your_app_material)
+    Button buttonMakeYourAppMaterial;
+    @Bind(R.id.main_button_go_ubiquitous)
+    Button buttonGoUbiquitous;
+    @Bind(R.id.main_button_capstone_design)
+    Button buttonCapstoneDesign;
+    @Bind(R.id.main_button_capstone_build)
+    Button buttonCapstoneBuild;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initViews();
+        ButterKnife.bind(this);
+
         setListenerToButtons();
-
-    }
-
-    private void initViews() {
-
-        buttonPopularMoviesFirstPart
-                = (Button) findViewById(R.id.main_button_popular_movies_first_part);
-        buttonPopularMoviesSecondPart
-                = (Button) findViewById(R.id.main_button_popular_movies_second_part);
-        buttonSuperDuo
-                = (Button) findViewById(R.id.main_button_super_duo);
-        buttonBuildItBigger
-                = (Button) findViewById(R.id.main_button_build_it_bigger);
-        buttonMakeYourAppMaterial
-                = (Button) findViewById(R.id.main_button_make_your_app_material);
-        buttonGoUbiquitous
-                = (Button) findViewById(R.id.main_button_go_ubiquitous);
-        buttonCapstoneDesign
-                = (Button) findViewById(R.id.main_button_capstone_design);
-        buttonCapstoneBuild
-                = (Button) findViewById(R.id.main_button_capstone_build);
 
     }
 
